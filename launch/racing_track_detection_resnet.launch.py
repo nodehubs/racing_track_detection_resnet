@@ -31,7 +31,8 @@ def generate_launch_description():
         executable='racing_track_detection_resnet',
         output='screen',
         parameters=[
-            {"sub_img_topic": "/hbmem_img"}
+            {"sub_img_topic": "/hbmem_img"},
+            {"model_path": "/opt/nodehub_model/race_detection/race_track_detection.bin"}
         ],
         arguments=['--ros-args', '--log-level', 'warn']
     )
