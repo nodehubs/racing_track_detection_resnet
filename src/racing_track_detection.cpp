@@ -108,7 +108,8 @@ int TrackDetectionNode::SetNodePara() {
   RCLCPP_INFO(rclcpp::get_logger("TrackDetectionNode"), "path:%s\n", model_path_.c_str());
   dnn_node_para_ptr_->model_file = model_path_;
   dnn_node_para_ptr_->model_task_type = model_task_type_;
-  dnn_node_para_ptr_->task_num = 4;
+  dnn_node_para_ptr_->task_num = 2;
+  dnn_node_para_ptr_->bpu_core_ids = hobot::dnn_node::BPUCoreIDType::BPU_CORE_1;
   return 0;
 }
 
