@@ -109,7 +109,7 @@ int TrackDetectionNode::SetNodePara() {
   dnn_node_para_ptr_->model_file = model_path_;
   dnn_node_para_ptr_->model_task_type = model_task_type_;
   dnn_node_para_ptr_->task_num = 2;
-  dnn_node_para_ptr_->bpu_core_ids = hobot::dnn_node::BPUCoreIDType::BPU_CORE_1;
+  dnn_node_para_ptr_->bpu_core_ids.push_back(hobot::dnn_node::BPUCoreIDType::BPU_CORE_1);;
   return 0;
 }
 
