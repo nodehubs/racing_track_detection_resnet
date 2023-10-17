@@ -183,7 +183,7 @@ void TrackDetectionNode::subscription_callback(
 
   // resize
   hbDNNResizeCtrlParam ctrl = {
-      HB_BPU_CORE_0, 0, HB_DNN_RESIZE_TYPE_BILINEAR, 0, 0, 0, 0};
+      HB_BPU_CORE_1, 0, HB_DNN_RESIZE_TYPE_BILINEAR, 0, 0, 0, 0};
   hbDNNTaskHandle_t task_handle = nullptr;
   hbDNNResize(&task_handle, &output_tensor, &input_tensor, &roi, &ctrl);
   ret = hbDNNWaitTaskDone(task_handle, 0);
