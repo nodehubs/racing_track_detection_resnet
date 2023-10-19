@@ -83,7 +83,7 @@ class TrackDetectionNode : public DnnNode {
     subscriber_hbmem_;
   rclcpp::Publisher<geometry_msgs::msg::PointStamped>::SharedPtr publisher_;
   cv::Mat image_bgr_;
-  std::string model_path_ = "/opt/nodehub_model/race_detection/race_track_detection.bin";
+  std::string model_path_ = "/opt/nodehub_model/race_detection/race_track_detection_simulation.bin";
   std::string sub_img_topic_ = "/hbmem_img";
 };
 

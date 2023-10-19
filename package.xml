@@ -21,6 +21,7 @@
   <exec_depend>hobot_codec</exec_depend>
   <exec_depend>websocket</exec_depend>
   <exec_depend>tros_race_track_detection_model</exec_depend>
+  <exec_depend>tros_race_track_detection_model_simulation</exec_depend>
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
