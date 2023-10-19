@@ -23,6 +23,11 @@ sudo apt install -y tros-racing-track-detection-resnet
 
 ```shell
 source /opt/tros/local_setup.bash
+
+#仿真（使用仿真模型）
+ros2 launch racing_track_detection_resnet racing_track_detection_resnet_simulation.launch.py
+
+# 实际场景（使用实际场景中的模型）
 ros2 launch racing_track_detection_resnet racing_track_detection_resnet.launch.py
 ```
 
@@ -50,8 +55,8 @@ ros2 launch racing_track_detection_resnet racing_track_detection_resnet.launch.p
 
 | 参数名                | 类型        | 说明   |
 | --------------------- | ----------- | -------------------------------------------------------------------------------------------------- |
-| model_path       | string | 推理使用的模型文件，请根据实际模型路径配置，默认值为/opt/nodehub_model/race_detection/race_track_detection.bin |
+| model_path       | string | 推理使用的模型文件，请根据实际模型路径配置，默认值为/opt/nodehub_model/race_detection/race_track_detection_simulation.bin |
 | sub_img_topic       | string |  接收的图片话题名称，请根据实际接收到的话题名称配置，默认值为/hbmem_img |
 
 # 注意
-该功能包提供的模型仅用于gazebo仿真环境中的赛道识别，若自行训练模型，请替换模型。
+该功能包提供gazebo仿真环境中可使用的模型以及特定的实际场景中可使用的模型，若自行采集数据集进行训练，请注意替换。
